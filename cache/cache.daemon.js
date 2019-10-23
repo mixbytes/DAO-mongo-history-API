@@ -23,7 +23,7 @@ MongoClient.connect( CONFIG.mongoURL, MONGO_OPTIONS, (err, db) => {
 			return console.error("Database error !!!", err);
 		}
         console.log("=== Database Connected!");
-        let DBO = db.db(CONFIG.mongoDB);
+        let DBO = db.db(db.s.options.dbName);
 		
 		// Start cache daemon ===== 
 		getAccounts(); 
