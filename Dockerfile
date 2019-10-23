@@ -5,8 +5,7 @@ WORKDIR /tool
 
 RUN rm -rf .git/
 
-RUN npm install && \
-    npm run build
+RUN npm install
 
 EXPOSE 3333
 
